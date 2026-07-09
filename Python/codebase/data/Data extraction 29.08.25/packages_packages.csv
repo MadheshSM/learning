@@ -1,0 +1,4 @@
+﻿id,bim360_account_id,bim360_project_id,locked,locked_at,locked_by,name,description,resource_count,created_at,created_by,updated_at,updated_by,version_resource_option
+4ff4381a-aea7-468c-aea0-e454cf7ca266,bf996092-8d66-408a-8d8e-5065ca3330c2,ada6015d-9fce-4f2c-b20f-fc9122d2face,f,,,soft_deleted_package_MEP_0a8a472e-7f69-47a9-a964-eb6012cff30f,MEP Drawings,2,2025-06-16 11:02:29.514,DVW2J8GUNHESYYKC,2025-06-16 11:07:39.289,DVW2J8GUNHESYYKC,latest
+f2e7ff20-8894-4975-88c6-b6dbc9b0f203,bf996092-8d66-408a-8d8e-5065ca3330c2,ada6015d-9fce-4f2c-b20f-fc9122d2face,f,,,Architecture,Architecture published GFC,0,2025-05-02 12:15:21.996,V9Q2X946QA52XTJG,2025-05-02 12:15:21.997,V9Q2X946QA52XTJG,latest
+0e0492fc-8aad-494e-986c-238bddd3f0f5,bf996092-8d66-408a-8d8e-5065ca3330c2,ada6015d-9fce-4f2c-b20f-fc9122d2face,f,,,Concept Stage - Arch,"",4,2025-05-02 12:25:14.01,V9Q2X946QA52XTJG,2025-05-02 12:26:51.452,V9Q2X946QA52XTJG,latest

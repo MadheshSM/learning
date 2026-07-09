@@ -1,0 +1,4 @@
+﻿id,bim360_account_id,bim360_project_id,name,length,position,type,delimiter,sample_code,is_variable_length,is_locked,created_at,updated_at
+b9372570-267a-11f0-bc28-835cf25e6127,bf996092-8d66-408a-8d8e-5065ca3330c2,ada6015d-9fce-4f2c-b20f-fc9122d2face,Segment 2,10,1,column,hyphen,**********,f,f,2025-05-01 10:54:58.375,2025-05-01 11:37:19.142
+a90fa6d0-2680-11f0-8be6-89b62edc5bbd,bf996092-8d66-408a-8d8e-5065ca3330c2,ada6015d-9fce-4f2c-b20f-fc9122d2face,Segment 3,10,2,code,hyphen,**********,f,f,2025-05-01 11:37:28.254,2025-05-01 11:37:49.671
+b6d84de0-267a-11f0-900e-634d20c91845,bf996092-8d66-408a-8d8e-5065ca3330c2,ada6015d-9fce-4f2c-b20f-fc9122d2face,Segment 1,5,0,code,hyphen,*****,f,f,2025-05-01 10:54:54.398,2025-05-01 11:37:59.813

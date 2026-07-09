@@ -1,0 +1,467 @@
+/**
+ * @krion/viewer-chat - Styles
+ * Chat interface styles that can be customized or overridden
+ */
+
+/* CSS Variables for theming */
+:root {
+  --krion-primary: #3b82f6;
+  --krion-primary-dark: #2563eb;
+  --krion-secondary: #64748b;
+  --krion-success: #22c55e;
+  --krion-error: #ef4444;
+  --krion-warning: #f59e0b;
+
+  /* Light theme colors */
+  --krion-bg: #ffffff;
+  --krion-bg-secondary: #f3f4f6;
+  --krion-bg-tertiary: #f9fafb;
+  --krion-text: #1f2937;
+  --krion-text-secondary: #6b7280;
+  --krion-text-muted: #9ca3af;
+  --krion-border: #e5e7eb;
+  --krion-border-light: #f3f4f6;
+
+  /* Chat bubble colors */
+  --krion-bubble-user-bg: #3b82f6;
+  --krion-bubble-user-text: #ffffff;
+  --krion-bubble-agent-bg: #f3f4f6;
+  --krion-bubble-agent-text: #1f2937;
+  --krion-bubble-agent-border: #e5e7eb;
+  --krion-bubble-error-bg: #fef2f2;
+  --krion-bubble-error-text: #991b1b;
+  --krion-bubble-system-bg: #f0f9ff;
+  --krion-bubble-system-text: #1e40af;
+
+  /* Avatar colors */
+  --krion-avatar-bg: #e0e7ff;
+  --krion-avatar-icon: #4f46e5;
+
+  /* Shadows */
+  --krion-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --krion-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --krion-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Dark theme */
+.krion-chat--dark {
+  --krion-bg: #1f2937;
+  --krion-bg-secondary: #374151;
+  --krion-bg-tertiary: #111827;
+  --krion-text: #f9fafb;
+  --krion-text-secondary: #d1d5db;
+  --krion-text-muted: #9ca3af;
+  --krion-border: #4b5563;
+  --krion-border-light: #374151;
+
+  --krion-bubble-agent-bg: #374151;
+  --krion-bubble-agent-text: #f9fafb;
+  --krion-bubble-agent-border: #4b5563;
+  --krion-bubble-error-bg: #450a0a;
+  --krion-bubble-error-text: #fecaca;
+  --krion-bubble-system-bg: #1e3a5f;
+  --krion-bubble-system-text: #bfdbfe;
+
+  --krion-avatar-bg: #312e81;
+  --krion-avatar-icon: #a5b4fc;
+}
+
+/* Main container */
+.krion-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--krion-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--krion-text);
+  border-left: 1px solid var(--krion-border);
+}
+
+/* Header */
+.krion-chat__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--krion-border);
+  background-color: var(--krion-bg-tertiary);
+}
+
+.krion-chat__header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--krion-primary);
+}
+
+.krion-chat__header-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.krion-chat__header-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Messages container */
+.krion-chat__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--krion-border) var(--krion-bg-secondary);
+}
+
+.krion-chat__messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.krion-chat__messages::-webkit-scrollbar-track {
+  background: var(--krion-bg-secondary);
+}
+
+.krion-chat__messages::-webkit-scrollbar-thumb {
+  background-color: var(--krion-border);
+  border-radius: 3px;
+}
+
+/* Empty state */
+.krion-chat__empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  color: var(--krion-text-muted);
+}
+
+.krion-chat__empty-state svg {
+  color: var(--krion-border);
+  margin-bottom: 1rem;
+}
+
+.krion-chat__empty-state p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Messages */
+.krion-chat__message {
+  display: flex;
+  animation: krion-message-slide 0.3s ease;
+}
+
+@keyframes krion-message-slide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.krion-chat__message--user {
+  justify-content: flex-end;
+}
+
+.krion-chat__message--agent {
+  justify-content: flex-start;
+}
+
+.krion-chat__message--system,
+.krion-chat__message--error {
+  justify-content: center;
+}
+
+/* Message wrapper */
+.krion-chat__message-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+/* Message label */
+.krion-chat__message-label {
+  font-size: 0.675rem;
+  color: var(--krion-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.krion-chat__message--user .krion-chat__message-label {
+  text-align: right;
+}
+
+.krion-chat__message--agent .krion-chat__message-label {
+  text-align: left;
+}
+
+/* Chat bubbles */
+.krion-chat__bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.krion-chat__message--user .krion-chat__bubble {
+  background-color: var(--krion-bubble-user-bg);
+  color: var(--krion-bubble-user-text);
+  border-bottom-right-radius: 0.25rem;
+}
+
+.krion-chat__message--agent .krion-chat__bubble {
+  background-color: var(--krion-bubble-agent-bg);
+  color: var(--krion-bubble-agent-text);
+  border-bottom-left-radius: 0.25rem;
+  border: 1px solid var(--krion-bubble-agent-border);
+}
+
+.krion-chat__bubble--error {
+  background-color: var(--krion-bubble-error-bg);
+  color: var(--krion-bubble-error-text);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.krion-chat__bubble--error svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.krion-chat__bubble--system {
+  background-color: var(--krion-bubble-system-bg);
+  color: var(--krion-bubble-system-text);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.krion-chat__bubble p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.krion-chat__bubble p + p {
+  margin-top: 0.5rem;
+}
+
+.krion-chat__bubble strong {
+  font-weight: 600;
+}
+
+.krion-chat__bubble em {
+  font-style: italic;
+}
+
+.krion-chat__bubble code {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85em;
+}
+
+.krion-chat--dark .krion-chat__bubble code {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Agent avatar */
+.krion-chat__avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--krion-avatar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.krion-chat__avatar svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--krion-avatar-icon);
+}
+
+/* Loading indicator */
+.krion-chat__loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--krion-text-secondary);
+  font-size: 0.75rem;
+}
+
+.krion-chat__loading-dots {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.krion-chat__loading-dots span {
+  width: 6px;
+  height: 6px;
+  background-color: var(--krion-primary);
+  border-radius: 50%;
+  animation: krion-loading-bounce 1.4s infinite ease-in-out both;
+}
+
+.krion-chat__loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.krion-chat__loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes krion-loading-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Sample queries */
+.krion-chat__samples {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--krion-border-light);
+  background-color: var(--krion-bg-tertiary);
+}
+
+.krion-chat__samples-label {
+  font-size: 0.675rem;
+  color: var(--krion-text-muted);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.krion-chat__samples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.krion-chat__sample-query {
+  background-color: var(--krion-bg);
+  color: var(--krion-text-secondary);
+  border: 1px solid var(--krion-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.krion-chat__sample-query:hover {
+  background-color: var(--krion-primary);
+  color: white;
+  border-color: var(--krion-primary);
+}
+
+/* Input area */
+.krion-chat__input-area {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--krion-border);
+  background-color: var(--krion-bg);
+}
+
+.krion-chat__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--krion-bg-secondary);
+  border: 1px solid var(--krion-border);
+  border-radius: 9999px;
+  padding: 0.25rem 0.25rem 0.25rem 1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.krion-chat__input-wrapper:focus-within {
+  border-color: var(--krion-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.krion-chat__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.875rem;
+  color: var(--krion-text);
+  min-width: 0;
+}
+
+.krion-chat__input::placeholder {
+  color: var(--krion-text-muted);
+}
+
+.krion-chat__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.krion-chat__send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--krion-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.krion-chat__send-btn:hover:not(:disabled) {
+  background-color: var(--krion-primary-dark);
+}
+
+.krion-chat__send-btn:disabled {
+  background-color: var(--krion-border);
+  cursor: not-allowed;
+}
+
+.krion-chat__send-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .krion-chat {
+    font-size: 13px;
+  }
+
+  .krion-chat__messages {
+    padding: 0.75rem;
+  }
+
+  .krion-chat__message-wrapper {
+    max-width: 90%;
+  }
+
+  .krion-chat__samples {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .krion-chat__input-area {
+    padding: 0.5rem 0.75rem;
+  }
+}

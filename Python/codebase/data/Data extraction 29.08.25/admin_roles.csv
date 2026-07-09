@@ -1,0 +1,175 @@
+﻿id,bim360_account_id,name,status
+2b7c419c-1cea-4d94-9693-a5b650fa2d11,bf996092-8d66-408a-8d8e-5065ca3330c2,Maker - MEP,active
+c022e657-a3b1-4e19-8bb0-0d814be1a4e9,bf996092-8d66-408a-8d8e-5065ca3330c2,Checker - MEP,active
+f02e6404-74e9-4172-b83d-0f21fd951a6d,bf996092-8d66-408a-8d8e-5065ca3330c2,Approver - MEP,active
+5cb02d64-3a5a-458c-ae7e-d1bbe3f1829c,bf996092-8d66-408a-8d8e-5065ca3330c2,Maker - Safety,active
+0588ab69-a18c-40ba-a43a-bd5fd203439a,bf996092-8d66-408a-8d8e-5065ca3330c2,Checker - Safety,active
+5626bceb-d873-408f-8106-470497ad0517,bf996092-8d66-408a-8d8e-5065ca3330c2,Approver - Safety,active
+8f8f1c47-c054-430b-bfba-1d35805591cf,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Architect Consultant - Retail,inactive
+3857e30c-dacf-4a29-915f-9fff9c29e7f6,bf996092-8d66-408a-8d8e-5065ca3330c2,Director Architect Consultant - Club and Master Plan,inactive
+e425156d-6622-4a2e-b8f0-41a5e38ec732,bf996092-8d66-408a-8d8e-5065ca3330c2,Architect Consultant - Retail,inactive
+8ad4dfea-44dc-4d97-aa5e-326e75a90abe,bf996092-8d66-408a-8d8e-5065ca3330c2,Architect Consultant - Club and Master Plan,inactive
+41384b70-7759-42be-99d2-1ce97221265a,bf996092-8d66-408a-8d8e-5065ca3330c2,Director Architect Consultant,active
+a6d8d3e9-e329-48e0-a2c8-5b0b0524366b,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Architect Consultant,active
+ff67dcda-ea1e-4155-9691-c38b7e6d5eea,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Structure Consultant,active
+7550c964-5017-4253-ad9f-3162cb7aaf15,bf996092-8d66-408a-8d8e-5065ca3330c2,Structure Consultant,active
+81ce4413-9b0b-4d7e-a872-2035cba0a9eb,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Structure Consultant - Stadium,inactive
+4be95290-7f58-4d0e-be0c-f3abe2bca791,bf996092-8d66-408a-8d8e-5065ca3330c2,Structure Consultant - Stadium,inactive
+e3ee698f-72e0-4633-80e7-fc6cf7c74ca2,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Project Architect - Club and Master Plan,inactive
+30eeb7ed-d12c-4ae2-9e21-6b9998579205,bf996092-8d66-408a-8d8e-5065ca3330c2,Architect -3D,active
+f4cd8631-1f2c-4fbe-a580-12e722485baa,bf996092-8d66-408a-8d8e-5065ca3330c2,MEPF,active
+16a32966-5943-4e24-9ec5-d8d59cc2df76,bf996092-8d66-408a-8d8e-5065ca3330c2,Architecture,active
+62ed9e2c-0140-47fc-baf7-2ffd3e843689,bf996092-8d66-408a-8d8e-5065ca3330c2,MEPF Consultant,active
+55e55350-ec0a-438e-be69-e06d082716e5,bf996092-8d66-408a-8d8e-5065ca3330c2,Structure,active
+b1af287c-2878-42e0-8b3d-5594e85f01dd,bf996092-8d66-408a-8d8e-5065ca3330c2,Architecture Consultant,inactive
+cd58c4dd-e8f3-47d3-9493-42fea363f469,bf996092-8d66-408a-8d8e-5065ca3330c2,Planning Engineer - Civil Contractor,active
+ce5aff4f-039a-48a1-80aa-d976463b7883,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Engineer - Civil Engineer,inactive
+e2e38580-4da9-456b-8880-dac70c681c7c,bf996092-8d66-408a-8d8e-5065ca3330c2,test,inactive
+0e106b70-6ad8-4f3a-82b2-a460619ef311,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Facade consultant,active
+3aa9a367-5e60-42d7-b7a6-92b8ac0cc552,bf996092-8d66-408a-8d8e-5065ca3330c2,Facade consultant,active
+c8639e88-220f-4751-8a0c-8490119fb586,bf996092-8d66-408a-8d8e-5065ca3330c2,Landscape Consultant,active
+c4a02787-5293-4aaa-b709-2a6b3aec63eb,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Landscape Consultant,active
+4214bed5-25de-4239-b2fe-b14c7be14846,bf996092-8d66-408a-8d8e-5065ca3330c2,Light Consultant,active
+ac5a3609-7d36-47e8-a221-ee5c256c0d3b,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Light Consultant,active
+8758af36-d87a-4817-b694-807b763f9369,bf996092-8d66-408a-8d8e-5065ca3330c2,Structure Peer Review Consultant,active
+231fad19-dd85-4a0f-9b88-ea12fec77bcc,bf996092-8d66-408a-8d8e-5065ca3330c2,"ICT, Security, Audio Visual & Acoustics Consultant",active
+0e3d6dc2-bb29-40b4-bcc9-534bd6f885a2,bf996092-8d66-408a-8d8e-5065ca3330c2,"Lead ICT, Security, Audio Visual & Acoustics Consultant",active
+0c9c91ec-f063-41a6-a4fe-a3fe1bebe3e1,bf996092-8d66-408a-8d8e-5065ca3330c2,"Director ICT, Security, Audio Visual & Acoustics Consultant",active
+326a474e-4bb8-4f1a-8c0f-b6695757a8a0,bf996092-8d66-408a-8d8e-5065ca3330c2,Vertical Transport Consultant,active
+346ae69f-cf15-4c75-9f83-f743b5f9b954,bf996092-8d66-408a-8d8e-5065ca3330c2,MEP Peer Review Consultant,active
+18ced67c-5f64-446a-bd02-6bfce44e2b51,bf996092-8d66-408a-8d8e-5065ca3330c2,Roof Consultant,active
+94f272ad-411b-454a-8530-47b0f8f7ab45,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Roof Consultant,active
+052a2d97-df59-47b0-9801-70e10e758fef,bf996092-8d66-408a-8d8e-5065ca3330c2,Signage consultant,active
+ada5b587-f6ae-4fa8-85d8-e17ed735b634,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Signage consultant,active
+e905addf-5d4c-44c2-9c0f-362b3c4c2e63,bf996092-8d66-408a-8d8e-5065ca3330c2,Wind Tunnel Analysis Consultant,active
+3aa23619-4ea5-41ef-8b85-e8597ddbb834,bf996092-8d66-408a-8d8e-5065ca3330c2,Director Facade Consultant,active
+82c3e57f-b273-4c56-ab8c-340fd850c099,bf996092-8d66-408a-8d8e-5065ca3330c2,Cost Consultant,active
+a6860167-2dc9-4b10-be11-950a044b5f23,bf996092-8d66-408a-8d8e-5065ca3330c2,Maker - Quality,active
+590d1cfc-7b18-42ed-870a-d26135a81d4c,bf996092-8d66-408a-8d8e-5065ca3330c2,Maker - Store,active
+440c92d0-4c12-47d2-9789-d727c4673829,bf996092-8d66-408a-8d8e-5065ca3330c2,Subcontractor,inactive
+02e600aa-3eb1-4695-9be7-4bcd5286afb0,bf996092-8d66-408a-8d8e-5065ca3330c2,Contractor,active
+01ee8a5c-e88f-4d1b-922b-86969cbef45f,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Project Manager,active
+24894ac3-91c1-4e96-90d6-87002be5f4ad,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Planning Engineer,active
+3fcf3ad8-d81a-4234-996b-e900841c3c03,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Billing Engineer,active
+d7f33a84-d306-4bd6-9937-db1adac70cbe,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Safery Engineer,active
+543a49e3-7953-4119-a8a3-38c8209b8e23,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Quality Engineer,active
+0ddb153e-3674-47a6-abad-d0dfaaca76da,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Surveyor,active
+eb003c39-164c-4135-a42a-4f29e65be7d9,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Store,active
+965e1d70-df1a-4926-a505-0b2ce2bef923,bf996092-8d66-408a-8d8e-5065ca3330c2,VKJ - Site Engineer,active
+4d771f7b-baee-4e55-a6e7-f06c012f9a06,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Supervisor,active
+cfff5950-5a05-44bf-9dca-24491016f965,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Foreman,active
+53ec5913-f1c8-4e4e-8cab-169440145e34,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Manager,active
+674a9a25-2f05-456b-8d63-5d688b2ccf09,bf996092-8d66-408a-8d8e-5065ca3330c2,Checker - Quality,active
+46eee6fa-bd94-4b64-adf2-3f55e81df972,bf996092-8d66-408a-8d8e-5065ca3330c2,Approver - Quality,active
+d221b030-1782-4142-8fa9-9d13508ff1ae,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts Engineer,active
+47431d0e-fdae-4e6a-bf62-468e27f3095a,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts Head,active
+584fb119-d5ac-4324-b467-a7ec57b7d375,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts Administration Lead,inactive
+17bbc78b-00e0-4191-b6ae-36c44d8cb052,bf996092-8d66-408a-8d8e-5065ca3330c2,D-Wall Consultant,active
+420aa253-2c31-4f4e-823a-b13c13f083dc,bf996092-8d66-408a-8d8e-5065ca3330c2,Management Trainee,active
+5e269ca8-d6f2-4667-a081-eff7b41a780f,bf996092-8d66-408a-8d8e-5065ca3330c2,Wagad - Site Engineer,active
+966d4358-c90a-487c-a885-e045194ba895,bf996092-8d66-408a-8d8e-5065ca3330c2,Wagad - Project Manager,active
+41dbcf66-471e-4cc9-bfa8-8253ae509c3d,bf996092-8d66-408a-8d8e-5065ca3330c2,Director - Rahlan,active
+90591767-c70f-41c0-a71d-d3da2827d765,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Manager - Civil Contractor,active
+06e76c97-5bc7-4243-840c-fe833d41cadb,bf996092-8d66-408a-8d8e-5065ca3330c2,Billing Engineer - Civil Contractor,active
+3efe3dd6-3ce4-4989-ab26-966f9e82b3b2,bf996092-8d66-408a-8d8e-5065ca3330c2,Coordination- Structure,active
+ccdf8eb8-b53b-406f-8be7-321adce5edf7,bf996092-8d66-408a-8d8e-5065ca3330c2,Architect,inactive
+e5d3bbf0-844b-4f74-94f2-4bf0b1740d50,bf996092-8d66-408a-8d8e-5065ca3330c2,BIM Manager,inactive
+a41ca2b0-e398-49d1-92de-187f6d41524a,bf996092-8d66-408a-8d8e-5065ca3330c2,Construction Manager,inactive
+aed21e25-b6e7-4dc5-a98e-6c706e2bbec3,bf996092-8d66-408a-8d8e-5065ca3330c2,Document Manager,inactive
+27f14658-00c7-4c66-8b54-25aa3c79aa2a,bf996092-8d66-408a-8d8e-5065ca3330c2,Engineer,inactive
+866ea3b3-a381-464e-ab2d-0712065eac16,bf996092-8d66-408a-8d8e-5065ca3330c2,VDC Manager,inactive
+55c1a0c3-9fa8-4ec4-bf28-d432b35b70fb,bf996092-8d66-408a-8d8e-5065ca3330c2,Estimator,inactive
+e2fa9205-6645-4c79-bc71-89b798c553fc,bf996092-8d66-408a-8d8e-5065ca3330c2,Executive,inactive
+9025237b-55a0-4f68-b45a-4eb75f2c6797,bf996092-8d66-408a-8d8e-5065ca3330c2,IT,inactive
+70545e83-ba7c-4612-8fdb-a9c38dc70e86,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Engineer,inactive
+c82a2588-80fc-47e0-9b60-95ed30cbdccb,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Manager,inactive
+aba646bd-b493-48bb-8352-1e2b4ac9137d,bf996092-8d66-408a-8d8e-5065ca3330c2,Superintendent,inactive
+f50f98b0-65ba-43b5-b991-efb045ca25b6,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Architect,active
+4db448a5-fd44-486e-82f7-28df0398a595,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Architect-PMC,active
+c96e064e-b8b0-4071-86cd-f7c21d5ac38c,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Project Architect,active
+a5bc9e53-3d75-46e4-a90b-cc4a2194caf0,bf996092-8d66-408a-8d8e-5065ca3330c2,Structural Manager,active
+0eb3581a-4e53-4055-b078-0399b6a2d920,bf996092-8d66-408a-8d8e-5065ca3330c2,Structural Engineer,active
+6da2503c-6c5c-477f-95e4-53e3d35ea863,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Structure,active
+0f3e1a1a-3021-4329-a176-2cb5faa05a17,bf996092-8d66-408a-8d8e-5065ca3330c2,Mechanical Engineer,active
+4bf19df4-81b1-49ce-abe2-bc68b88d8d7d,bf996092-8d66-408a-8d8e-5065ca3330c2,Electrical Engineer,active
+d99effbb-8b39-43c3-b5a9-28dc3c607c95,bf996092-8d66-408a-8d8e-5065ca3330c2,Plumbing Engineer,active
+ce0abe70-cd8c-41e3-9c2f-42373a0fd7f3,bf996092-8d66-408a-8d8e-5065ca3330c2,Mechanical Manager,active
+fbf906b7-f262-434a-a628-31ab53aed6b9,bf996092-8d66-408a-8d8e-5065ca3330c2,Electrical Manager,active
+b86b0fc4-dc82-45da-9e19-8ba5ca297712,bf996092-8d66-408a-8d8e-5065ca3330c2,Plumbing Manager,active
+a999b436-a2eb-43f4-bd0d-aedb6b3d89ad,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead MEP,active
+45a25e14-6914-4f85-bebb-518335e5ea19,bf996092-8d66-408a-8d8e-5065ca3330c2,Assistant PMO,active
+d6701fe4-379a-416f-9a69-9ce924194406,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead PMO,active
+60871017-729f-4483-85d2-78de38377558,bf996092-8d66-408a-8d8e-5065ca3330c2,Planning Engineer,active
+a792f5ce-8328-460a-ac59-03da7580d0dd,bf996092-8d66-408a-8d8e-5065ca3330c2,Cluster Head,active
+5d5858d4-5725-4a2f-9da4-798b6f81d687,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Head,active
+f7fb2a16-3762-4122-ae36-cf02a3698f97,bf996092-8d66-408a-8d8e-5065ca3330c2,Quality Engineer,active
+86e2ec1c-4435-4166-89af-198f15322b9f,bf996092-8d66-408a-8d8e-5065ca3330c2,Safety Engineer,active
+ecee1a09-f44f-4e2d-9c85-25475433ab63,bf996092-8d66-408a-8d8e-5065ca3330c2,Quality Lead,active
+877f66ae-b082-442c-8b5d-4c9ced1ddd23,bf996092-8d66-408a-8d8e-5065ca3330c2,Safety Lead,active
+6df23868-d4bf-4bd4-a43b-d87629430df8,bf996092-8d66-408a-8d8e-5065ca3330c2,Store Incharge,active
+e6a18dff-e1cc-4888-9e0e-61deab4cfb97,bf996092-8d66-408a-8d8e-5065ca3330c2,Accounts,active
+6894a7db-5a71-4061-a7e5-7be37a2fe8ea,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Billing Engineer,active
+078180f2-6d68-4d90-aa92-a95337e905f3,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Billing Manager,active
+25829562-0354-41fb-bf03-c8f95578955b,bf996092-8d66-408a-8d8e-5065ca3330c2,HO Billing Manager,active
+3640cc0a-ebe8-4b11-b0d7-ca4e01557918,bf996092-8d66-408a-8d8e-5065ca3330c2,Area Audit Engineer,active
+def5da78-1c2d-4506-8f20-e82e9dd0ecf4,bf996092-8d66-408a-8d8e-5065ca3330c2,Area Audit Lead Manager,active
+4e94344b-cfdc-4008-8949-ed3abfa89d74,bf996092-8d66-408a-8d8e-5065ca3330c2,Quantity Survey Manager,active
+f5e669cd-45b5-4bbc-bb72-f5f51404b611,bf996092-8d66-408a-8d8e-5065ca3330c2,Project Manager,active
+125a3757-01dd-4b9d-9d5b-192548dd8f54,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts Manager,active
+035637d8-478a-4eb7-8445-f86056599ec8,bf996092-8d66-408a-8d8e-5065ca3330c2,Purchase Manager,active
+e52d2c2c-2ac1-4970-9a10-806716fa2546,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts-PMC,active
+619ab9aa-6273-480c-ac76-b98d343aae93,bf996092-8d66-408a-8d8e-5065ca3330c2,Store Head,active
+f0f8c239-14b7-49ee-86d6-5de76ecd2f99,bf996092-8d66-408a-8d8e-5065ca3330c2,Account Head,active
+bbec5624-6ea3-4fa0-b625-3fa41962a10f,bf996092-8d66-408a-8d8e-5065ca3330c2,Billing Head,active
+1fb1f15a-6b54-4acd-8c35-7b86c87cf9f4,bf996092-8d66-408a-8d8e-5065ca3330c2,Area Audit Lead,active
+df279dc8-819a-4d25-a15d-94aa6ad610c1,bf996092-8d66-408a-8d8e-5065ca3330c2,Quantity Surveying Lead,active
+7c832ea3-9ef5-4500-82b6-611b77964f8f,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts Lead,inactive
+98870b44-9515-4621-898a-a7e1ba2d8bbf,bf996092-8d66-408a-8d8e-5065ca3330c2,Purchase Lead,active
+1f3c94f2-b2ac-4e05-8fce-64419d0c1895,bf996092-8d66-408a-8d8e-5065ca3330c2,Liaison Consultant,active
+92038b2d-774e-49bd-882e-0d115901d914,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Liaison Consultant,active
+c57091d7-9491-4b2f-95eb-0f37ede4fd9a,bf996092-8d66-408a-8d8e-5065ca3330c2,Mechanical Consultant,active
+2621c564-41e5-4d11-865d-80dc09401f52,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Mechanical Consultant,active
+72e88215-f8fc-45be-8eda-e1765c0ca05a,bf996092-8d66-408a-8d8e-5065ca3330c2,Director Mechanical Consultant,active
+ea02b41f-fe2f-413f-8bfc-c716311761c8,bf996092-8d66-408a-8d8e-5065ca3330c2,Electrical Consultant,active
+510520f5-7080-47ee-bd42-b5e659e83f39,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Electrical Consultant,active
+d76da4c2-07b9-4eed-b70b-e9e116aade63,bf996092-8d66-408a-8d8e-5065ca3330c2,Director Electrical Consultant,active
+910dbfe8-e626-457d-b469-ec656269ade6,bf996092-8d66-408a-8d8e-5065ca3330c2,Plumbing Consultant,active
+2d16aae8-09dd-4d19-a4e8-636920e64305,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Plumbing Consultant,active
+d0b8b9bc-0133-4c52-868f-e4145ecf02ba,bf996092-8d66-408a-8d8e-5065ca3330c2,Director Plumbing Consultant,active
+dd37f68b-8fe8-4b80-9707-7c6e662a9bb5,bf996092-8d66-408a-8d8e-5065ca3330c2,Traffic Consultant,active
+34be8beb-0316-4e0c-8c4e-a02a1360bb9a,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Traffic Consultant,active
+5661081e-cce8-43ee-82fe-7cde852783e2,bf996092-8d66-408a-8d8e-5065ca3330c2,EC Consultant,active
+7d259f43-b0b2-48e6-8703-5de44ec69309,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead EC Consultant,active
+1bb7eb55-aae5-4a3f-8331-794750f3986c,bf996092-8d66-408a-8d8e-5065ca3330c2,Director EC Consultant,active
+9a15cea8-89ef-474a-8868-39784d16d571,bf996092-8d66-408a-8d8e-5065ca3330c2,Green Building Consultant,active
+04d62b81-7654-4e5c-bf1a-644ff03cec8d,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Green Building Consultant,active
+0869ece3-195f-4d2b-9d21-3431246209de,bf996092-8d66-408a-8d8e-5065ca3330c2,BOH & Kitchen Consultant,active
+74b698c4-01f3-4895-b87b-36cc967441f7,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead BOH & Kitchen Consultant,active
+43b8ae34-c672-4f44-86c9-448d92dd8a1b,bf996092-8d66-408a-8d8e-5065ca3330c2,Architect Consultant,active
+4bd4f872-6b47-42d0-90b6-1a2cc3771b17,bf996092-8d66-408a-8d8e-5065ca3330c2,Superintendent,inactive
+e5a869c5-3f20-4e6e-ab84-8c8b906d8260,bf996092-8d66-408a-8d8e-5065ca3330c2,Planning Manager,active
+5d07e83c-82e9-4914-8177-0cf66dfd668a,bf996092-8d66-408a-8d8e-5065ca3330c2,Maker - Civil,active
+e07def83-8899-4979-b176-a3929e711f60,bf996092-8d66-408a-8d8e-5065ca3330c2,Checker - Civil,active
+89a22a9b-48d1-4b8d-b54c-0ac6ceb38864,bf996092-8d66-408a-8d8e-5065ca3330c2,Approver - Civil,active
+0f3ee56a-f1c3-4772-acbf-98f2b346a76d,bf996092-8d66-408a-8d8e-5065ca3330c2,Coordination-Design,active
+9ec8f0e8-02e7-47e7-8015-de3a188301ae,bf996092-8d66-408a-8d8e-5065ca3330c2,HO Account Manager,active
+98f505cf-acb5-45ee-a638-1a721599a170,bf996092-8d66-408a-8d8e-5065ca3330c2,Quantity Survey Manager - MEP,active
+4a5cdc25-4dbd-46e9-b3da-cd328f6a802f,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Manager - Civil Contractor,active
+c309364f-ac33-4100-b30b-ec1f8f5defa4,bf996092-8d66-408a-8d8e-5065ca3330c2,Executive Director,active
+e27ba42f-b1ce-40a5-b36f-91ab08c94953,bf996092-8d66-408a-8d8e-5065ca3330c2,EA to ED,active
+7a550409-e8a0-45eb-b5ba-cea48b716ff0,bf996092-8d66-408a-8d8e-5065ca3330c2,Coordinator - VKJ,active
+0cd5c3ef-da30-4ca9-9324-9b881ba372a0,bf996092-8d66-408a-8d8e-5065ca3330c2,Director - VKJ,active
+cf6a9764-ea7a-47dd-b1f0-360c7351b9f0,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Engineer,active
+97d35679-f764-4ba7-9425-d5ff02847b84,bf996092-8d66-408a-8d8e-5065ca3330c2,Indigo - Site Engineer,active
+8f0a32f3-21aa-4cf1-85bb-6b51250ee578,bf996092-8d66-408a-8d8e-5065ca3330c2,Indigo - Quality Engineer,active
+c991b689-3f00-4ab4-8bf2-e9fea4493722,bf996092-8d66-408a-8d8e-5065ca3330c2,Indigo - Project Manager,active
+40321da0-5e90-4b90-bc06-97ed095212a5,bf996092-8d66-408a-8d8e-5065ca3330c2,Interior Architect,active
+a6e62255-9c4e-4271-802a-1551a7020ea0,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Interior Consultant,active
+23c534cb-f9f5-4ff6-a7c1-481d766aa14a,bf996092-8d66-408a-8d8e-5065ca3330c2,Interior Consultant,active
+b6777f6c-9bd8-4667-afb5-6851927d61d3,bf996092-8d66-408a-8d8e-5065ca3330c2,Lead Interior,active
+ce876901-e41d-4162-8837-3e1a3ca92b40,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Accountant,active
+0ec0f3b5-ce4e-48d0-9d6f-2d02f9ad0ae9,bf996092-8d66-408a-8d8e-5065ca3330c2,Contracts Administration,active
+aa3d3af2-7417-471a-8c12-e94c0dc8381e,bf996092-8d66-408a-8d8e-5065ca3330c2,Site Engineer - Civil Contractor,active
+612001d7-0e1a-42cd-b556-5866206ec48b,bf996092-8d66-408a-8d8e-5065ca3330c2,Quality Engineer - Civil Contractor,active
+bae18df8-f4af-40be-a488-df4af8c6779f,bf996092-8d66-408a-8d8e-5065ca3330c2,Safety - Civil Contractor,active
+1b240f64-8168-40a4-9750-43553760b8a2,bf996092-8d66-408a-8d8e-5065ca3330c2,Director - Indigo,active
