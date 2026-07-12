@@ -20,6 +20,7 @@
         <a href="node.html">Node</a>
         <a href="angular.html" class="active">Angular</a>
         <a href="python.html">Python</a>
+        <a href="cognizant.html">Cognizant</a>
       </nav>
       <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
     </div>
@@ -50,6 +51,15 @@
       </div>
       <div id="phase-chart"></div>
       <div id="phase-table"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Time &amp; pace</h2>
+    <div class="stat-grid" id="time-stats"></div>
+    <p class="track-current" id="pace-note" style="border:none;padding-top:12px;"></p>
+    <div class="chart-card">
+      <div id="time-log-table"></div>
     </div>
   </section>
 
@@ -105,6 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("phase-toggle"),
     stats.phases
   );
+
+  const timeStats = computeTimeStats(data, stats);
+  renderTimeStatTiles(document.getElementById("time-stats"), timeStats);
+  renderPaceNote(document.getElementById("pace-note"), timeStats);
+  renderTimeLogTable(document.getElementById("time-log-table"), timeStats.recent || []);
 
   renderConceptTable(document.getElementById("concept-table"), data.concepts);
 

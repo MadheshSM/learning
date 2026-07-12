@@ -12,14 +12,15 @@
   <div class="topbar-inner">
     <div class="brand">
       <div class="brand-title">Learning Performance</div>
-      <div class="brand-sub">Node · Angular · Python — self-paced tracks</div>
+      <div class="brand-sub" id="brand-sub">—</div>
     </div>
     <div class="topbar-actions">
-      <nav class="tracks-nav">
+      <nav class="tracks-nav" id="tracks-nav">
         <a href="index.html" class="active">Overview</a>
         <a href="node.html">Node</a>
         <a href="angular.html">Angular</a>
         <a href="python.html">Python</a>
+        <a href="cognizant.html">Cognizant</a>
       </nav>
       <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
     </div>
@@ -31,7 +32,7 @@
   <section class="hero-row">
     <div>
       <div class="hero-figure" id="hero-figure">—</div>
-      <div class="hero-label">Overall completion across all 3 tracks</div>
+      <div class="hero-label" id="hero-label">Overall completion</div>
     </div>
     <div class="hero-meta" id="hero-meta-lines"></div>
   </section>
@@ -56,29 +57,37 @@
 
 <footer>
   <span>Data generated <code id="generated-at">—</code> from each track's <code>learning_tracker.xlsx</code>.</span>
-  <span>Updated the tracker in Excel? Run <code>python dashboard/scripts/generate_data.py</code> from the repo root, then reload.</span>
+  <span>Updated a tracker in Excel? Run <code>python dashboard/scripts/generate_data.py</code> from the repo root, then reload.</span>
 </footer>
 
 <script src="data/node.data.js"></script>
 <script src="data/angular.data.js"></script>
 <script src="data/python.data.js"></script>
+<script src="data/cognizant.data.js"></script>
 <script src="assets/app.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   const D = window.DASHBOARD_DATA;
-  const entries = ["node", "angular", "python"].map((key) => {
+  const trackKeys = Object.keys(TRACK_META).filter((k) => D[k]);
+  const entries = trackKeys.map((key) => {
     const data = D[key];
     const stats = computeStats(data);
-    return { key, data, stats };
+    const timeStats = computeTimeStats(data, stats);
+    return { key, data, stats, timeStats };
   });
+
+  document.getElementById("brand-sub").textContent =
+    entries.map((e) => e.data.title).join(" · ") + " — self-paced tracks";
 
   const totalConcepts = entries.reduce((a, e) => a + e.stats.total, 0);
   const doneConcepts = entries.reduce((a, e) => a + e.stats.counts["Done"], 0);
   const activeCounts = entries.reduce((a, e) => a + e.stats.counts["In Progress"] + e.stats.counts["Practiced"], 0);
+  const totalHours = Math.round(entries.reduce((a, e) => a + e.timeStats.totalHours, 0) * 10) / 10;
   const overallPct = pct(doneConcepts, totalConcepts);
 
   document.getElementById("hero-figure").textContent = overallPct + "%";
+  document.getElementById("hero-label").textContent = `Overall completion across all ${entries.length} tracks`;
 
   const lastActivity = entries.map((e) => e.stats.lastActivity).filter(Boolean).sort().pop();
   document.getElementById("hero-meta-lines").innerHTML = `
@@ -90,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { label: "Total concepts", value: totalConcepts },
     { label: "Done", value: doneConcepts, good: true },
     { label: "In progress / practiced", value: activeCounts },
-    { label: "Tracks not yet finished", value: entries.filter((e) => !e.stats.allDone).length + " / 3" },
+    { label: "Hours logged", value: totalHours },
   ]);
 
   renderTrackCards(document.getElementById("track-cards"), entries);

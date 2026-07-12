@@ -19,6 +19,7 @@
   --node-color: #1baf7a;
   --angular-color: #e34948;
   --python-color: #eda100;
+  --cognizant-color: #4a3aa7;
 
   /* ordinal status ramp — one hue, light -> dark */
   --status-not-started: #86b6ef;
@@ -47,6 +48,7 @@
   --node-color: #199e70;
   --angular-color: #e66767;
   --python-color: #c98500;
+  --cognizant-color: #9085e9;
 
   --status-not-started: #86b6ef;
   --status-in-progress: #5598e7;

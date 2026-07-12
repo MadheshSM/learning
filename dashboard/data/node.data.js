@@ -516,5 +516,6 @@ window.DASHBOARD_DATA.node = {
       "completed": false,
       "date": ""
     }
-  ]
+  ],
+  "timeLog": []
 };

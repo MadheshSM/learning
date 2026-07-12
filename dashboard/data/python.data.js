@@ -343,5 +343,6 @@ window.DASHBOARD_DATA.python = {
       "completed": false,
       "date": ""
     }
-  ]
+  ],
+  "timeLog": []
 };

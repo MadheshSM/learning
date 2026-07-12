@@ -455,5 +455,6 @@ window.DASHBOARD_DATA.angular = {
       "completed": false,
       "date": ""
     }
-  ]
+  ],
+  "timeLog": []
 };

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learning Performance — Python</title>
+<title>Learning Performance — Cognizant</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">
-      <div class="brand-title" id="brand-title">Python</div>
+      <div class="brand-title" id="brand-title">Cognizant</div>
       <div class="brand-sub" id="brand-sub">—</div>
     </div>
     <div class="topbar-actions">
@@ -19,8 +19,8 @@
         <a href="index.html">Overview</a>
         <a href="node.html">Node</a>
         <a href="angular.html">Angular</a>
-        <a href="python.html" class="active">Python</a>
-        <a href="cognizant.html">Cognizant</a>
+        <a href="python.html">Python</a>
+        <a href="cognizant.html" class="active">Cognizant</a>
       </nav>
       <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
     </div>
@@ -78,14 +78,14 @@
 </main>
 
 <footer>
-  <span>Data generated <code id="generated-at">—</code> from <code>Python/learning_tracker.xlsx</code>.</span>
+  <span>Data generated <code id="generated-at">—</code> from <code>cognizant_study/learning_tracker.xlsx</code>.</span>
   <span>Updated the tracker in Excel? Run <code>python dashboard/scripts/generate_data.py</code> from the repo root, then reload.</span>
 </footer>
 
-<script src="data/python.data.js"></script>
+<script src="data/cognizant.data.js"></script>
 <script src="assets/app.js"></script>
 <script>
-const TRACK_KEY = "python";
+const TRACK_KEY = "cognizant";
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   const data = window.DASHBOARD_DATA[TRACK_KEY];

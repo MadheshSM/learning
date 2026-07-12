@@ -35,6 +35,13 @@ TRACKS = [
         "subtitle": "Async, FastAPI, Pydantic & pandas",
         "accent": "python",
     },
+    {
+        "key": "cognizant",
+        "file": "cognizant_study/learning_tracker.xlsx",
+        "title": "Cognizant AI Roles",
+        "subtitle": "2-Year Study Guide — 13 topics, Q&A format",
+        "accent": "cognizant",
+    },
 ]
 
 
@@ -64,6 +71,26 @@ def read_tracker(ws):
             "notes": cell_str(row[8]) if len(row) > 8 else "",
         })
     return concepts
+
+
+def read_time_log(ws):
+    entries = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        date = cell_str(row[0])
+        hours = row[1] if len(row) > 1 else None
+        if not date or hours is None:
+            continue
+        try:
+            hours = float(hours)
+        except (TypeError, ValueError):
+            continue
+        entries.append({
+            "date": date,
+            "hours": hours,
+            "notes": cell_str(row[2]) if len(row) > 2 else "",
+        })
+    entries.sort(key=lambda e: e["date"])
+    return entries
 
 
 def read_checklist(ws):
@@ -98,6 +125,7 @@ def main():
             "generatedAt": generated_at,
             "concepts": read_tracker(wb["Tracker"]),
             "checklist": read_checklist(wb["Self-Assessment Checklist"]),
+            "timeLog": read_time_log(wb["Time Log"]) if "Time Log" in wb.sheetnames else [],
         }
         out_path = f"dashboard/data/{track['key']}.data.js"
         payload = json.dumps(data, indent=2, ensure_ascii=False)
@@ -108,7 +136,7 @@ def main():
         )
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(js)
-        print(f"wrote {out_path} ({len(data['concepts'])} concepts, {len(data['checklist'])} checklist items)")
+        print(f"wrote {out_path} ({len(data['concepts'])} concepts, {len(data['checklist'])} checklist items, {len(data['timeLog'])} time log entries)")
 
 
 if __name__ == "__main__":

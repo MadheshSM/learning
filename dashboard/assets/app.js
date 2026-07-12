@@ -15,6 +15,7 @@ const TRACK_META = {
   node: { label: "Node", href: "node.html", var: "--node-color" },
   angular: { label: "Angular", href: "angular.html", var: "--angular-color" },
   python: { label: "Python", href: "python.html", var: "--python-color" },
+  cognizant: { label: "Cognizant", href: "cognizant.html", var: "--cognizant-color" },
 };
 
 function cssVar(name) {
@@ -111,6 +112,71 @@ function shortPhaseName(name) {
 }
 
 /* ---------------------------------------------------------------------
+   Time & pace — logged from the "Time Log" sheet (Date | Hours Spent | Notes)
+--------------------------------------------------------------------- */
+
+function parseISODate(s) {
+  const [y, m, d] = s.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
+
+function formatDate(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function daysBetween(a, b) {
+  const MS = 86400000;
+  return Math.round((b - a) / MS);
+}
+
+function addDays(date, days) {
+  const d = new Date(date);
+  d.setDate(d.getDate() + days);
+  return d;
+}
+
+function computeTimeStats(data, stats) {
+  const log = data.timeLog || [];
+  const totalHours = Math.round(log.reduce((a, e) => a + e.hours, 0) * 10) / 10;
+
+  if (!log.length) {
+    return { hasData: false, totalHours: 0, entryCount: 0 };
+  }
+
+  const today = new Date();
+  const firstDate = parseISODate(log[0].date);
+  const lastDate = parseISODate(log[log.length - 1].date);
+  const elapsedDays = Math.max(1, daysBetween(firstDate, today) + 1);
+  const avgHoursPerDay = Math.round((totalHours / elapsedDays) * 100) / 100;
+
+  const doneCount = stats.counts["Done"];
+  const remainingConcepts = stats.total - doneCount;
+  const hoursPerConcept = doneCount > 0 ? totalHours / doneCount : null;
+  const estRemainingHours = hoursPerConcept !== null ? Math.round(remainingConcepts * hoursPerConcept * 10) / 10 : null;
+  const projectedDays = (estRemainingHours !== null && avgHoursPerDay > 0) ? Math.ceil(estRemainingHours / avgHoursPerDay) : null;
+  const projectedFinishDate = projectedDays !== null ? formatDate(addDays(today, projectedDays)) : null;
+
+  return {
+    hasData: true,
+    totalHours,
+    entryCount: log.length,
+    firstDate: log[0].date,
+    lastDate: log[log.length - 1].date,
+    elapsedDays,
+    avgHoursPerDay,
+    hoursPerConcept,
+    estRemainingHours,
+    projectedDays,
+    projectedFinishDate,
+    allDone: stats.allDone,
+    recent: log.slice().reverse(),
+  };
+}
+
+/* ---------------------------------------------------------------------
    Stat tiles
 --------------------------------------------------------------------- */
 
@@ -135,10 +201,16 @@ function renderStatTiles(el, tiles) {
 function renderTrackCards(el, entries) {
   el.innerHTML = "";
   el.className = "track-grid";
-  entries.forEach(({ key, data, stats }) => {
+  entries.forEach(({ key, data, stats, timeStats }) => {
     const meta = TRACK_META[key];
     const card = document.createElement("div");
     card.className = "track-card";
+    let finishLine = "Log time to see a completion estimate";
+    if (timeStats && timeStats.hasData) {
+      finishLine = stats.allDone
+        ? `Finished — ${timeStats.totalHours} hrs logged`
+        : (timeStats.projectedFinishDate ? `Projected finish: <strong>${timeStats.projectedFinishDate}</strong>` : `${timeStats.totalHours} hrs logged so far`);
+    }
     card.innerHTML = `
       <div class="track-card-head">
         <div>
@@ -152,7 +224,10 @@ function renderTrackCards(el, entries) {
         <span>${stats.counts["Done"]} / ${stats.total} concepts done</span>
         <span>Checklist ${stats.checklistDone}/${stats.checklistTotal}</span>
       </div>
-      <div class="track-current">Current focus: <strong>${stats.allDone ? "All phases complete" : shortPhaseName(stats.currentPhase || "—")}</strong></div>
+      <div class="track-current">
+        <div>Current focus: <strong>${stats.allDone ? "All phases complete" : shortPhaseName(stats.currentPhase || "—")}</strong></div>
+        <div style="margin-top:4px;">${finishLine}</div>
+      </div>
       <a class="track-link" href="${meta.href}">Open ${meta.label} dashboard →</a>
     `;
     el.appendChild(card);
@@ -318,4 +393,72 @@ function renderChecklist(el, items) {
     `;
     el.appendChild(row);
   });
+}
+
+/* ---------------------------------------------------------------------
+   Time & pace section (standalone track pages)
+--------------------------------------------------------------------- */
+
+function renderTimeStatTiles(el, ts) {
+  el.innerHTML = "";
+  el.className = "stat-grid";
+  if (!ts.hasData) {
+    el.innerHTML = `<div class="empty-state">No time logged yet — add rows (Date, Hours Spent, Notes) to the <code>Time Log</code> sheet in <code>learning_tracker.xlsx</code>, then re-run <code>generate_data.py</code>.</div>`;
+    return;
+  }
+  const tiles = [
+    { label: "Hours logged", value: ts.totalHours },
+    { label: "Days since you started", value: ts.elapsedDays },
+    { label: "Avg hours / day", value: ts.avgHoursPerDay },
+    {
+      label: ts.allDone ? "Finished" : "Projected finish",
+      value: ts.allDone ? "🎉" : (ts.projectedFinishDate || "Not enough data"),
+      good: ts.allDone,
+    },
+  ];
+  tiles.forEach((t) => {
+    const tile = document.createElement("div");
+    tile.className = "stat-tile";
+    tile.innerHTML = `<div class="label">${t.label}</div><div class="value${t.good ? " good" : ""}">${t.value}</div>`;
+    el.appendChild(tile);
+  });
+}
+
+function renderPaceNote(el, ts) {
+  if (!ts.hasData) { el.innerHTML = ""; return; }
+  if (ts.allDone) {
+    el.textContent = `All concepts done — ${ts.totalHours} hours logged over ${ts.elapsedDays} days. Nice work.`;
+    return;
+  }
+  if (ts.hoursPerConcept === null) {
+    el.textContent = `${ts.totalHours} hours logged so far, averaging ${ts.avgHoursPerDay} hrs/day. Mark a concept "Done" to unlock a completion estimate.`;
+    return;
+  }
+  el.textContent = `At your current pace (${ts.avgHoursPerDay} hrs/day, ~${ts.hoursPerConcept.toFixed(1)} hrs/concept), the remaining work is roughly ${ts.estRemainingHours} hours — about ${ts.projectedDays} more days, landing around ${ts.projectedFinishDate}.`;
+}
+
+function renderTimeLogTable(el, entries) {
+  el.innerHTML = "";
+  if (!entries.length) {
+    el.innerHTML = `<div class="empty-state">No sessions logged yet.</div>`;
+    return;
+  }
+  const table = document.createElement("table");
+  table.className = "data-table";
+  table.innerHTML = `
+    <thead><tr><th>Date</th><th>Hours</th><th>Notes</th></tr></thead>
+    <tbody>
+      ${entries.map((e) => `
+        <tr>
+          <td>${e.date}</td>
+          <td class="yn">${e.hours}</td>
+          <td class="notes-cell">${e.notes || ""}</td>
+        </tr>
+      `).join("")}
+    </tbody>
+  `;
+  const wrap = document.createElement("div");
+  wrap.className = "overflow-x";
+  wrap.appendChild(table);
+  el.appendChild(wrap);
 }
