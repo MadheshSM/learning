@@ -58,6 +58,6 @@ Learnings/
 ├── Python/           plan.md · learning_tracker.xlsx · CLAUDE.md · codebase/ · practice/
 ├── Node/              plan.md · learning_tracker.xlsx · CLAUDE.md · .claude/backend/skills/
 ├── Angular/           plan.md · learning_tracker.xlsx · CLAUDE.md · .claude/{skills,agents}/
-├── cognizant_study/   plan.md · learning_tracker.xlsx · CLAUDE.md · study_guide.md
+├── cognizant_study/   plan.md · learning_tracker.xlsx · CLAUDE.md · study_guide.md · cognizant_ai_study_guide.docx
 └── dashboard/         index.html · node.html · angular.html · python.html · cognizant.html
 ```

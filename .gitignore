@@ -1,3 +1,18 @@
 __pycache__/
 *.pyc
+.venv/
+venv/
 .claude/scheduled_tasks.lock
+
+# Office lock files (created while a tracker .xlsx is open)
+~$*.xlsx
+~$*.xls
+.~lock.*#
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# In case any tooling ever gets added under dashboard/
+node_modules/
