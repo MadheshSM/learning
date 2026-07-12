@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Performance — Overview</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-title">Learning Performance</div>
+      <div class="brand-sub">Node · Angular · Python — self-paced tracks</div>
+    </div>
+    <div class="topbar-actions">
+      <nav class="tracks-nav">
+        <a href="index.html" class="active">Overview</a>
+        <a href="node.html">Node</a>
+        <a href="angular.html">Angular</a>
+        <a href="python.html">Python</a>
+      </nav>
+      <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero-row">
+    <div>
+      <div class="hero-figure" id="hero-figure">—</div>
+      <div class="hero-label">Overall completion across all 3 tracks</div>
+    </div>
+    <div class="hero-meta" id="hero-meta-lines"></div>
+  </section>
+
+  <section>
+    <div class="stat-grid" id="stat-tiles"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">By track</h2>
+    <div class="track-grid" id="track-cards"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Completion comparison</h2>
+    <div class="chart-card">
+      <div id="compare-chart"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Data generated <code id="generated-at">—</code> from each track's <code>learning_tracker.xlsx</code>.</span>
+  <span>Updated the tracker in Excel? Run <code>python dashboard/scripts/generate_data.py</code> from the repo root, then reload.</span>
+</footer>
+
+<script src="data/node.data.js"></script>
+<script src="data/angular.data.js"></script>
+<script src="data/python.data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+  const D = window.DASHBOARD_DATA;
+  const entries = ["node", "angular", "python"].map((key) => {
+    const data = D[key];
+    const stats = computeStats(data);
+    return { key, data, stats };
+  });
+
+  const totalConcepts = entries.reduce((a, e) => a + e.stats.total, 0);
+  const doneConcepts = entries.reduce((a, e) => a + e.stats.counts["Done"], 0);
+  const activeCounts = entries.reduce((a, e) => a + e.stats.counts["In Progress"] + e.stats.counts["Practiced"], 0);
+  const overallPct = pct(doneConcepts, totalConcepts);
+
+  document.getElementById("hero-figure").textContent = overallPct + "%";
+
+  const lastActivity = entries.map((e) => e.stats.lastActivity).filter(Boolean).sort().pop();
+  document.getElementById("hero-meta-lines").innerHTML = `
+    <div class="hero-meta-line">${doneConcepts} of ${totalConcepts} concepts done across all tracks</div>
+    <div class="hero-meta-line">${lastActivity ? "Last activity: " + lastActivity : "No activity logged yet"}</div>
+  `;
+
+  renderStatTiles(document.getElementById("stat-tiles"), [
+    { label: "Total concepts", value: totalConcepts },
+    { label: "Done", value: doneConcepts, good: true },
+    { label: "In progress / practiced", value: activeCounts },
+    { label: "Tracks not yet finished", value: entries.filter((e) => !e.stats.allDone).length + " / 3" },
+  ]);
+
+  renderTrackCards(document.getElementById("track-cards"), entries);
+  renderCompareChart(document.getElementById("compare-chart"), entries);
+
+  document.getElementById("generated-at").textContent = entries[0].data.generatedAt;
+});
+</script>
+</body>
+</html>
