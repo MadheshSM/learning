@@ -1,0 +1,29 @@
+#separator:tab
+#html:false
+#tags column:3
+What is the difference between a name and an object in Python?	A name is a label that points at an object. The object holds the value and lives in memory. Assignment binds a name to an object - it never copies the object.	Phase1::Python_mental_model
+a = [1, 2] then b = a then b.append(3). What is a now?	[1, 2, 3]. Both names point at the SAME list object. append mutates that one object.	Phase1::Python_mental_model
+a = [1, 2] then b = a then b = [9]. What is a now?	[1, 2]. Reassignment rebinds the name b to a new object. It does not touch the object a points at.	Phase1::Python_mental_model
+Which common Python types are mutable?	list, dict, set, and most custom class instances. Immutable - int, float, str, tuple, bool, None, frozenset.	Phase1::Python_mental_model
+Why does modifying a list inside a function change the caller's list?	The function parameter is a new name bound to the same object. Mutating through it mutates the shared object. Rebinding the parameter would not.	Phase1::Python_mental_model
+Why is a mutable default argument like def f(x=[]) a bug?	The default object is created once when the function is defined and reused on every call, so mutations persist between calls.	Phase1::Python_mental_model
+How do you read a Python traceback?	Bottom-up. The last line is the error type and message. The line directly above it is where it was raised. Read upward to trace how you got there.	Phase1::Python_mental_model
+What does a for loop actually do under the hood?	Calls iter() on the object to get an iterator, then calls next() on it repeatedly, and stops when StopIteration is raised.	Phase1::Python_mental_model
+What is the call stack?	The stack of active function calls. Each call pushes a frame with its own local names. Returning pops the frame. Unbounded recursion overflows it.	Phase1::Python_mental_model
+What is the difference between return and print?	print sends text to the screen and returns None. return hands a value back to the caller so other code can use it. A function that only prints is nearly useless in a pipeline.	Phase1::Python_mental_model
+When should you use a dict instead of a list?	When you look things up by a key rather than by position. Dict lookup is roughly constant time. Scanning a list is proportional to its length.	Phase1::Python_mental_model
+When should you use a set?	For membership tests and de-duplication. Fast lookups, no duplicates, no order guarantees.	Phase1::Python_mental_model
+What does a list comprehension do?	Builds a new list from an iterable in one expression - [f(x) for x in items if cond(x)]. Equivalent to a for loop that appends.	Phase1::Python_mental_model
+Why is a bare except: bad?	It swallows every exception including typos, KeyboardInterrupt and SystemExit, hiding real bugs. Catch the specific exception you expect.	Phase1::Python_mental_model
+What does with open(path) as f: give you?	A context manager that guarantees the file is closed, even if an exception is raised inside the block.	Phase1::Python_mental_model
+Difference between json.load and json.loads?	load reads from a file object. loads reads from a string. Same for dump (to file) and dumps (to string).	Phase1::Python_mental_model
+What does if __name__ == "__main__": do?	Runs the block only when the file is executed directly, not when it is imported as a module. Lets a file be both a script and a library.	Phase1::Python_mental_model
+What is self in a Python method?	The instance the method was called on, passed automatically as the first argument. It is how a method reaches its own object's attributes.	Phase1::Python_mental_model
+What is __init__ for?	It runs right after an instance is created, to set up that instance's initial attributes. It is not a constructor - the object already exists when it runs.	Phase1::Python_mental_model
+What does __repr__ give you?	A developer-facing string shown when you inspect the object in a REPL or print a list of them. Hugely useful for debugging.	Phase1::Python_mental_model
+What is a generator?	A function that uses yield to produce values lazily, one at a time, holding its state between calls. Uses almost no memory regardless of how many values it produces.	Phase1::Python_mental_model
+What is the difference between a shallow and a deep copy?	A shallow copy duplicates the outer container but shares the inner objects. A deep copy (copy.deepcopy) recursively duplicates everything.	Phase1::Python_mental_model
+What is truthiness in Python?	Empty things are False - 0, "", [], {}, set(), None. Almost everything else is True. This is why if items: works instead of if len(items) > 0:.	Phase1::Python_mental_model
+What is the first step of the problem-solving method?	Restate the problem in one sentence in your own words, then write input and expected output by hand for two examples - before writing any code.	Phase1::Python_mental_model
+Why write the steps in English as comments before coding?	It separates thinking about WHAT to do from fighting with HOW to say it in syntax. Doing both at once is what makes problems feel impossible.	Phase1::Python_mental_model
+What is a virtual environment and why does it exist?	An isolated per-project Python install and package set, so two projects can depend on different versions of the same library without conflicting.	Phase1::Python_mental_model
