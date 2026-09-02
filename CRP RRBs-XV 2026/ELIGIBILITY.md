@@ -69,29 +69,101 @@ Government/Quasi-Government/PSU employees) does not bind you at application stag
 
 ---
 
-## 3. ⚠️ The one field still missing
+## 3. Your category — MBC (state) → OBC (central)
 
-**Your community/category is not recorded in [madhesh.md](madhesh.md).** It changes three things
-materially:
+You are **MBC** under Tamil Nadu's classification. For IBPS — a **central** recruitment — that is
+not the operative label. Here is exactly how it maps, and where the trap is.
 
-| If you are… | Fee (× 2 posts) | Age relaxation | TN Grama Bank OA posts in your pool |
-|---|---|---|---|
-| UR / General | ₹850 × 2 = **₹1,700** | none (you don't need it) | 106 |
-| **OBC (Non-Creamy Layer)** | ₹850 × 2 = **₹1,700** | +3 yrs | **65** |
-| SC | ₹175 × 2 = **₹350** | +5 yrs | 47 |
-| ST | ₹175 × 2 = **₹350** | +5 yrs | 2 |
-| EWS | ₹850 × 2 = **₹1,700** | none | 24 |
+### 3a. Does MBC count as OBC for IBPS? — Almost certainly yes 🟢
 
-Cutoffs for OBC/SC/ST are meaningfully lower than UR. **If you hold a valid community certificate,
-apply under that category — you do not forfeit UR consideration by doing so.**
+Tamil Nadu runs its own 69% system with **BC / BC(M) / MBC / DNC / SC / SCA / ST**. The Government
+of India does not use those tiers. Central recruitment uses the **Central List of OBCs for the
+State of Tamil Nadu**, maintained by the National Commission for Backward Classes, which folds TN's
+BC, MBC and DNC communities into a **single OBC list of 178 entries**.
 
-Certificate rules from the notification, if applicable to you:
-- **OBC:** certificate must carry the **'Non-Creamy Layer' clause** in the Government of India
-  format, **issued on or after 01.04.2026**. If yours predates that, start the renewal now — it is
-  needed at document verification/joining, not at application.
-- **EWS:** certificate must be *"valid for the year 2026-2027 for the financial year 2025-26."*
+Local copy downloaded for you: [official/ncbc-tn-obc-list.pdf](official/ncbc-tn-obc-list.pdf)
+(source: https://ncbc.nic.in/writereaddata/cl/tamil.pdf)
 
-Add this to `madhesh.md` before you fill the form.
+I verified that TN **MBC** communities do appear in it — e.g. Vanniyakula Kshatriya (incl. Vanniyar,
+Vannia Gounder), Meenavar, Valaiyar, Boyar, Oddar, Ambalakarar, Isaivellalar, Sengunthar are all
+listed. So MBC → central OBC is the normal outcome.
+
+**But it is per-caste, not per-tier.** There is no blanket rule that "all MBC = OBC." A few
+communities are absent, and some have since moved to ST. Spelling also varies between the state and
+central lists (*Koravar* vs *Kuravar*, etc.).
+
+> ### ⬜ ACTION — do this before you pay the fee
+> Open [official/ncbc-tn-obc-list.pdf](official/ncbc-tn-obc-list.pdf) (or
+> https://www.ncbc.nic.in/user_panel/centralliststateview.aspx → Tamil Nadu) and find **your exact
+> caste name**. Search spelling variants. Then write it into [madhesh.md](madhesh.md).
+> - **Found it** → apply as **OBC** on the IBPS form
+> - **Not found under any spelling** → apply as **General/UR**. Claiming OBC without the central
+>   listing gets your candidature cancelled at document verification, after you've done all the work.
+
+### 3b. ⚠️ THE TRAP: your TN community certificate is the wrong document
+
+This is what actually catches Tamil Nadu candidates.
+
+| | State MBC certificate | **Central OBC (NCL) certificate** |
+|---|---|---|
+| Issued for | TN state quota — TNPSC, state colleges | **Central posts — IBPS, SSC, RRB, banks** |
+| Says | "belongs to MBC" | "…recognized as a **backward class under** Resolution No. 12011/68/93-BCC(C) dt 10/09/93…" **and does not belong to the creamy layer** |
+| Format | TN government format | **Government of India prescribed format** (annexure in the notification, p. ~3682) |
+| Valid for IBPS? | 🔴 **No** | 🟢 Yes |
+
+The notification is unambiguous:
+
+> *"OBC category candidates should submit the OBC certificate on the format prescribed by Govt. of
+> India containing the 'non-creamy layer' clause, issued **on or after 01.04.2026** till the date of
+> interview/document verification."*
+
+**So:** apply to the Tahsildar / RDO for a **central-format OBC NCL certificate**, and make sure it
+is dated **on or after 01.04.2026**. One issued in 2023 for a college admission will be rejected
+however genuine it is. Start this now — it takes weeks, not days.
+
+Good news on timing: it is required at **document verification / joining**, *not* at application.
+So a pending certificate does **not** stop you applying by 21 September. Tick the OBC box now, get
+the paper in parallel.
+
+### 3c. 🟢 Your Krion salary does NOT put you in the creamy layer
+
+Most working candidates get this wrong and needlessly apply as General, throwing away a real
+advantage. Per DoPT rules:
+
+- The creamy-layer test is applied to your **parents'** status and income — **your own income is not
+  counted at all.** Neither is a spouse's.
+- The ₹8 lakh/year ceiling **excludes income from salary and from agriculture.** It applies only to
+  *other* income — business, profession, rent, interest, property — averaged over the three
+  preceding financial years.
+
+So being an AI Developer at Krion is irrelevant to this test. Even your parents being salaried
+employees does not by itself create creamy-layer status — that is decided by rank/post for
+government service, or by non-salary income for others. **Do not self-exclude. Let the Tahsildar
+decide.**
+
+### 3d. What OBC actually gets you here
+
+| | Effect |
+|---|---|
+| **Age relaxation** | **+3 years** → your window runs to ~2035 instead of ~2032. You don't need it now (you're 22), but it widens your runway considerably |
+| **Vacancy pool** | **65** of the 244 TN Grama Bank OA posts are OBC — **plus** you remain in the 106 UR pool. Score above the UR cutoff and you're counted against UR, not your quota. Effective pool up to **171** |
+| **Cutoff** | The OBC cutoff is normally meaningfully lower than UR |
+| **Fee** | 🔴 **No concession — you still pay ₹850 per post.** The ₹175 rate is only SC/ST/PwBD/ESM/DESM. Budget **₹1,700** for both applications |
+
+### 3e. And for your TNPSC goal, MBC is worth *more*
+
+At state level you keep the **MBC/DNC quota (20%)**, which is separate from and smaller than the BC
+pool — a genuinely stronger position than the merged central OBC 27%. Combined with the PSTM note
+in §7, that is the shape of your TNPSC Group IV maths. Verify against the actual TNPSC notification
+when it drops; TNPSC rules are its own and nothing in this IBPS notification governs them.
+
+### 3f. Checklist
+
+- [ ] Find your exact caste in [official/ncbc-tn-obc-list.pdf](official/ncbc-tn-obc-list.pdf)
+- [ ] Write it into [madhesh.md](madhesh.md)
+- [ ] Apply as **OBC** on both IBPS forms (if listed)
+- [ ] Apply to Tahsildar/RDO for a **central-format OBC NCL certificate dated on/after 01.04.2026**
+- [ ] Budget **₹1,700** — no fee concession for OBC
 
 ---
 
@@ -195,7 +267,8 @@ at full intensity, do neither, and have nothing to show in December.
 
 ## 6. Application checklist
 
-- [ ] Add your **community/category** to [madhesh.md](madhesh.md); check OBC(NCL) cert issue date
+- [ ] Confirm your exact caste is in the Central OBC list for TN, then apply as **OBC**; get a
+      central-format OBC(NCL) certificate issued
       is on/after 01.04.2026, or EWS cert valid for 2026-27 / FY 2025-26
 - [ ] Scan **SSLC marksheet** (No. 10707047) — your Tamil proficiency proof
 - [ ] Scan **HSC marksheet** (No. 26677385) and **BCA degree/consolidated** (No. C 008220)

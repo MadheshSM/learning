@@ -1,6 +1,9 @@
 # Madhesh S — Academic Marks Record
 
 - **Date of Birth:** 16 Aug 2004
+- **Community (Tamil Nadu state classification):** MBC — Most Backward Class
+- **Community (Central / GOI classification):** OBC — *pending confirmation, see below*
+- **Exact caste/community name:** ⬜ _____________ ← **fill this in, it decides everything**
 - **School:** SSKV Boys Matric Hr Sec School, Kanchipuram
 - **UG:** BCA (Data Science) — B.S. Abdur Rahman Crescent Institute of Science & Technology, Chennai
 - **PG:** M.Sc. Applied Data Science — SRM Institute of Science and Technology, Kattankulathur
@@ -8,6 +11,14 @@
 ---
 
 ## Current Job
+
+> **Note on community for central recruitment (IBPS, SSC, RRB, banks):**
+> Tamil Nadu's **MBC** is a *state* classification. Central recruitment uses the **Central List of
+> OBCs for Tamil Nadu** (NCBC), which merges TN's BC, MBC and DNC into one OBC list of **178
+> entries**. Local copy: [official/ncbc-tn-obc-list.pdf](official/ncbc-tn-obc-list.pdf).
+> You must (a) find your exact caste name in that list, and (b) hold a **central-format OBC
+> Non-Creamy-Layer certificate** — your TN community certificate is *not* the same document.
+> Details and the creamy-layer rule: [ELIGIBILITY.md §3](ELIGIBILITY.md).
 
 - **Role:** AI Developer / Graduate Trainee AI
 - **Company:** Krion Consulting Pvt Ltd

@@ -84,7 +84,10 @@ Stage 4   Dec 14 – Jan 29    MAINS           7 weeks    five sections, section
 
 Do not study yet. Do these five things.
 
-- [ ] Add your **community/category** to `madhesh.md` (see [ELIGIBILITY.md §3](ELIGIBILITY.md))
+- [ ] **Category:** find your exact caste in [official/ncbc-tn-obc-list.pdf](official/ncbc-tn-obc-list.pdf),
+      write it into `madhesh.md`, then apply as **OBC** — and start the central-format OBC(NCL)
+      certificate at the Tahsildar (must be dated on/after 01.04.2026). See
+      [ELIGIBILITY.md §3](ELIGIBILITY.md)
 - [ ] **Apply for Office Assistant** at ibps.in — Tamil Nadu / Tamil Nadu Grama Bank
 - [ ] **Apply for Officer Scale-I** — separate form, separate fee (deadline 21 Sep for both)
 - [ ] Pick your **exam medium** — English, Hindi or Tamil for TN — and never switch again.
