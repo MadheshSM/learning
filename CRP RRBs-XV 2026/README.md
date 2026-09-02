@@ -14,6 +14,10 @@
 > 📘 **Your day-by-day plan: [STUDY-PLAN.md](STUDY-PLAN.md)** — from-scratch, 14 weeks to prelims,
 > built around a full-time job. **Use it instead of §9 and §10 below**, which were written before
 > your record was available.
+>
+> 🎯 **Target scores: [CUTOFFS.md](CUTOFFS.md)** — Tamil Nadu cutoff history. Short version:
+> **68/80 in prelims, 68/100 in mains.** TN is one of the highest-cutoff states in India, and the
+> OBC cushion here is only ~1 mark.
 
 ## 1. THE ONE THING THAT MATTERS RIGHT NOW
 
