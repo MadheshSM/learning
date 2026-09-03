@@ -64,8 +64,8 @@ it — it is checked at document verification, **not** at application time.
 Relaxation: SC/ST +5 yrs · OBC (non-creamy layer) +3 yrs · PwBD +10 yrs · ESM/DESM = actual service
 period + 3 yrs (8 yrs for DESM SC/ST), max age 50.
 
-⚠️ **VERIFY THIS YOURSELF BEFORE PAYING.** If you were born before 02.09.1998 you are out for
-Office Assistant in the General category. This is the only clause that can disqualify you.
+✅ **Resolved.** Your DOB is 16.08.2004 — age 22 as on 01.09.2026, comfortably inside the window,
+with ~6 years of eligibility left. See [ELIGIBILITY.md §2](ELIGIBILITY.md).
 
 ### Fee
 
@@ -186,7 +186,9 @@ pay. If it doesn't, the November attempt makes you sharper for December.
 
 ## 7. Previous year papers — downloaded
 
-See [pyq/](pyq/) — 26 PDFs, year-wise, split into `prelims/` and `mains/`.
+See [pyq/](pyq/) — **49 PDFs, all English**: 20 full prelims papers (80Q, timed-mock ready),
+12 full mains papers, plus sectional extracts and solution keys.
+Which paper to use when: [pyq/README.md](pyq/README.md).
 Index: [pyq/INDEX.csv](pyq/INDEX.csv).
 
 ⚠️ **Honest caveat:** IBPS has **never** officially released its question papers. Every "previous
